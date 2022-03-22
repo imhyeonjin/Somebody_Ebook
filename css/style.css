@@ -9,11 +9,9 @@ vertical-align:baseline;
 background:transparent;
 }
 
-/*
 html{
     overflow-x: hidden;
 }
-*/
 
 *{margin:0;padding:0;}/*여백초기화*/
 a{text-decoration: none; color: #333;}/*밑줄,글자색바꾸기*/
@@ -858,8 +856,8 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
         margin-right: 9px;
     }
     .icon_wrap li{
-        width: 20px;
-        height: 20px;
+        width: 21px;
+        height: 21px;
         margin: 0 6px;
     }
 
@@ -910,7 +908,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
         left: 0px;
     }
     .media_2{
-        right: 17px;
+        right: 16px;
     }
     .main_visual{
         width: 80%;
@@ -933,7 +931,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     }
     #section_1{
         width: 100%;
-        padding: 0 17px;
+        padding: 0 16px;
     }
     .img_area{
         clear: both;
@@ -955,12 +953,12 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 
     #content_2{
         width: 100%;
-        padding: 0 0 0 17px;
+        padding: 0 0 0 16px;
     }
 
 
     .section_2_2{/*recommended_book*/
-        padding: 0 17px 0 0;
+        padding: 0 16px 0 0;
     }
     .reco_book_wrap{
         width: 100%;
@@ -989,7 +987,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 
     #content_3{
         width: 100%;
-        padding: 0 17px;
+        padding: 0 16px;
     }
 
 
@@ -1016,7 +1014,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 
     #section_4{/*news*//*section_4*/
         width: 100%;
-        padding: 0 0 0 17px;
+        padding: 0 0 0 16px;
     }
     .news_wrap{
         width: 100%;
@@ -1050,7 +1048,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 
     #footer{/*footer*/
         width: 100%;
-        padding: 0 17px;
+        padding: 0 16px;
     }
     .footer_info_wrap{width: 100%;}
     .footer_info{font-size: 9px; padding-bottom: 30px;}
@@ -1070,3 +1068,6 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     .daily_book_text{
     }
 }
+
+
+
