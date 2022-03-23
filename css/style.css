@@ -9,6 +9,10 @@ vertical-align:baseline;
 background:transparent;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 *{margin:0;padding:0;}/*여백초기화*/
 a{text-decoration: none; color: #333;}/*밑줄,글자색바꾸기*/
 ul{list-style: none;}/*블릿없애기*/
