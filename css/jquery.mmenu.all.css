@@ -48,6 +48,7 @@ body.modal-open .mm-slideout{z-index:unset}
 #mobile_gnb li{
     font-size: 28px;
     font-weight: 600;
+    font-family: 'jost';
 }
 #mobile_gnb li a{
     display: block;

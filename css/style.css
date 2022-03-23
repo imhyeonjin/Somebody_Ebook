@@ -18,6 +18,8 @@ a{text-decoration: none; color: #333;}/*밑줄,글자색바꾸기*/
 ul{list-style: none;}/*블릿없애기*/
 body{
 	font-family: 'Noto Sans KR', sans-serif;
+    -webkit-font-smoothing: 'Jost', sans-serif;
+	font-smoothing: 'Jost', sans-serif;
 	font-size:16px;
 	color:#333;
     width: 100%;
@@ -30,6 +32,7 @@ body{
 #header_wrap{
     width: 100%;
     /*overflow: hidden;*/
+    height: 75px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -39,7 +42,6 @@ body{
 }
 #header{
     width: 100%;
-    height: 75px;
     margin: 0 auto;
 }
 .logo{
@@ -129,11 +131,14 @@ body{
 /*main_visual*/
 .main_visual_wrap{
     width: 100%;
-    height: 600px;
+    height: 650px;
     margin: 0 auto;
-    background-color: #111;
     /*margin-top: 75px;*/
     position: relative;
+    background-image: url(../images/media_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
 }
 .media_1{
     width: 80%;
@@ -145,14 +150,14 @@ body{
 .media_2{
     width: 90px;
     position: absolute; 
-    top: 0; 
+    top: 75px; 
     right: 25px;
 }
 .media_2 img{display: block; width: 100%;}
 .main_visual{
-    width: 75%;
+    width: 80%;
     position: absolute;
-    top: 11%;
+    top: 20%;
     left: 10%;
     z-index: 99;
 }
@@ -161,16 +166,24 @@ body{
     color: #111;
     font-weight: 600;
     line-height: 1.6em;
-    word-spacing: 10px;
+    font-family: 'jost';
 }
+/*
+.main_visual p a{color: #111; font-weight: 600; padding: 0 15px; text-shadow: -1px 0 #0B6FFB, 0 1px #0B6FFB, 1px 0 #0B6FFB, 0 -1px #0B6FFB;}
+.main_visual p a:hover{color: #F3FF57; text-shadow: none;}
+.main_visual span{color: #0B6FFB; padding: 5px 15px;}
+.main_visual .yellow{color: #111; background-color: #F3FF57; line-height: 4em;}
+*/
+
 .main_visual p a{color: #111; font-weight: 600; padding: 0 15px;}
 .main_visual p a:hover{color: #F3FF57;}
-.main_visual span{background-color: #0B6FFB; padding: 5px 15px;}
-.main_visual .yellow{background-color: #F3FF57; line-height: 4em;}
+.main_visual span{background-color: #0B6FFB; padding: 5px 15px; margin: 0 20px;}
+.main_visual .yellow{background-color: #F3FF57; line-height: 4em; margin: 0 0;}
+
 
 
 /*content_1*/
-h2{font-size: 40px; font-weight: 600; line-height: 1.3em; padding-bottom: 40px; padding-top: 160px;}
+h2{font-family: 'jost'; font-size: 40px; font-weight: 600; line-height: 1.3em; padding-bottom: 40px; padding-top: 160px;}
 h3{font-size: 22px; font-weight: 600; line-height: 1em; padding-bottom: 20px; padding-top: 80px;}
 
 /*
@@ -634,11 +647,23 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     #header_wrap{
         height: 70px;
     }
-    nav{/*gnd*/
+    #pc_menu{/*gnd*/
         display: none;
     }
     .search_pc{
         display: none;
+    }
+
+    .m_menu{
+        display: block;
+        float: left;
+        margin-top: 15px;
+        margin-left: 16px;
+    }
+    .m_menu a img{
+        display: block;
+        width: 22px;
+        height: 22px;
     }
 
 
@@ -651,16 +676,17 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
         left: 0px;
     }
     .media_2{
-        right: 30px;
+        width: 70px;
+        top: 70px; 
+        right: 0px;
     }
     .main_visual{
-        width: 80%;
-        top: 11%;
+        width: 82%;
         left: 5%;
     }
     .main_visual p{
-        font-size: 28px;
-        word-spacing: 5px;
+        font-size: 34px;
+        line-height: 1.4em;
     }
     .main_visual p a{padding: 0 12px;}
     .main_visual span{padding: 3px 12px;}
@@ -743,11 +769,23 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     #header_wrap{
         height: 70px;
     }
-    nav{/*gnd*/
+    #pc_menu{/*gnd*/
         display: none;
     }
     .search_pc{
         display: none;
+    }
+
+    .m_menu{
+        display: block;
+        float: left;
+        margin-top: 15px;
+        margin-left: 16px;
+    }
+    .m_menu a img{
+        display: block;
+        width: 22px;
+        height: 22px;
     }
 
 
@@ -760,16 +798,16 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
         left: 0px;
     }
     .media_2{
-        right: 30px;
+        width: 80px;
+        top: 70px; 
+        right: 0px;
     }
     .main_visual{
         width: 80%;
-        top: 11%;
         left: 5%;
     }
     .main_visual p{
         font-size: 28px;
-        word-spacing: 5px;
     }
     .main_visual p a{padding: 0 12px;}
     .main_visual span{padding: 3px 12px;}
@@ -925,16 +963,17 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
         left: 0px;
     }
     .media_2{
-        right: 16px;
+        width: 60px;
+        top: 50px; 
+        right: 0px;
     }
     .main_visual{
         width: 80%;
-        top: 9%;
+        top: 12%;
         left: 5%;
     }
     .main_visual p{
-        font-size: 22px;
-        word-spacing: 3px;
+        font-size: 23px;
     }
     .main_visual p a{padding: 0 12px;}
     .main_visual span{padding: 3px 12px;}
