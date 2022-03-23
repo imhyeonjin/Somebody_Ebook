@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('.close_btn>a').on('click', function(){
         $('.menu_bg').hide(); 
         $('.sidebar_menu').animate({
-            left: '-' + 80 + '%'
+            left: '-' + 50 + '%'
                     },function(){
                         $('.sidebar_menu').hide();          
                     });  

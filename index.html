@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-
-<meta name="viewport" content="user-scalable=0;"/>
-<meta name="viewport" content="width=device-width">
-<meta content="yes" name="apple-mobile-web-app-capable" />  
-<meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <title></title>
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+<!--daily_book_css-->
+<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
 
-<!--모바일메뉴
+<!--new_book_js_css-->
+<link rel="stylesheet" type="text/css" href="js/slick.css">
+<link rel="stylesheet" type="text/css" href="js/slick-theme_.css">
+<link rel="stylesheet" type="text/css" href="css/new_book_style.css">
+
+
+<!--모바일메뉴-->
 <link href="css/jquery.mmenu.all.css" rel="stylesheet" type="text/css">
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mmenu.all.js"></script>
@@ -25,7 +26,7 @@
     $(document).ready(function(){		
             $("#menu").mmenu({
                "slidingSubmenus": false,
-               "navbar": { "title":"subway" },
+               "navbar": { "title":"mymy.books" },
                "extensions": [
                   "pagedim-black",
                   "position-left",
@@ -34,33 +35,32 @@
             });
     });
 </script>
--->
-
-<!--모바일메뉴-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/motion.js"></script>
-<link rel="stylesheet" href="css/m_menu_style.css">
 
 
-<!--middle_banner-->
-
-
-<!--daily_book_css-->
-<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
-
-<!--new_book_js_css-->
-<link rel="stylesheet" type="text/css" href="js/slick.css">
-<link rel="stylesheet" type="text/css" href="js/slick-theme_.css">
-<link rel="stylesheet" type="text/css" href="css/new_book_style.css">
-<!--
-<script src="js/jquery.min.js"></script>
-<script src="js/mmenu.min.js"></script>
--->
 </head>
 <body>
     <!--header-->
     <div id="header_wrap">
         <header id="header" class="header">
+
+            <div class="m_menu"><!--mobile메뉴-->
+                <a href="#menu"><img src="images/icon_menu.png" alt="m_menu"></a>
+                <div id="menu">
+                  <ul id="mobile_gnb">
+                    <li>
+                        <form action="#" class="search_m_input">
+                            <p><input type="text"></p>
+                        </form>
+                    </li>
+                    <li><a href="index.html#content_1">ABOUT</a></li>
+                    <li><a href="index.html#section_2">BOOKSHOP</a></li>
+                    <li><a href="index.html#section_3">GOODS</a></li>
+                    <li><a href="index.html#section_4">NEWS</a></li>
+                  </ul>
+                </div>
+            </div>
+
+
             <h1 class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
             <nav id="pc_menu">
                 <ul id="pc_gnb">
@@ -70,72 +70,23 @@
                     <li><a href="index.html#section_4">NEWS</a></li>
                 </ul>
             </nav>
+
+
             <ul class="icon_wrap">
                 <li><a href="javascript:return false;"><img src="images/icon_cart.png" alt="icon_cart"></a></li>
                 <li><a href="javascript:return false;"><img src="images/icon_bell.png" alt="icon_bell"></a></li>
                 <li><a href="javascript:return false;"><img src="images/icon_user.png" alt="icon_user"></a></li>
             </ul>
-            <div class="search">
-                <form action="#" class="search_input">
+            <div class="search_pc">
+                <form action="#" class="search_pc_input">
                     <p><img src="images/icon_search.png" alt="search"><input type="text"></p>
                 </form>
             </div>
+
+        
         </header>    
     </div>
-    
-
-
-    <!--
-    <div id="header_wrap">
-        <div class="menu_btn">
-            <a href="#"><img src="images/icon_menu.png"></a>
-        </div>
-
-        <header id="header" class="header">
-            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
-            <nav id="pc_menu">
-                <ul id="pc_gnb">
-                    <li><a href="index.html#content_1">ABOUT</a></li>
-                    <li><a href="index.html#section_2">BOOKSHOP</a></li>
-                    <li><a href="index.html#section_3">GOODS</a></li>
-                    <li><a href="index.html#section_4">NEWS</a></li>
-                </ul>
-            </nav>
-            <ul class="icon_wrap">
-                <li><a href="javascript:return false;"><img src="images/icon_cart.png" alt="icon_cart"></a></li>
-                <li><a href="javascript:return false;"><img src="images/icon_bell.png" alt="icon_bell"></a></li>
-                <li><a href="javascript:return false;"><img src="images/icon_user.png" alt="icon_user"></a></li>
-            </ul>
-            <div class="search">
-                <form action="#" class="search_input">
-                    <p><img src="images/icon_search.png" alt="search"><input type="text"></p>
-                </form>
-            </div>
-        </header>
-    </div>
-    
-    <header id="m_menu">
-        <div class="menu_bg"></div>
-        <div class="sidebar_menu">
-            <div class="close_btn">
-                 <a href="#"><img src="images/icon_back.png"></a>
-            </div>
-            <ul id="menu_wrap">
-                 <li><a href="index.html#content_1">ABOUT</a></li>
-                 <li><a href="index.html#section_2">BOOKSHOP</a></li>
-                 <li><a href="index.html#section_3">GOODS</a></li>
-                 <li><a href="index.html#section_4">NEWS</a></li>
-            </ul>
-        </div>
-    </header>
-    -->
-    
-
-
-
-
-
-
+   
 
 
     <!--main_visual-->
@@ -392,7 +343,7 @@
         </section>
    </div>             
              <!--slick-->
-             <section class="regular slider">
+             <div class="regular slider">
                 <div>
                   <img src="images/new_book_1.jpg">
                   <p class="new_book_text">우리에게 허락된 미래<br><span>조해진<br>14,800원</span></p>
@@ -433,7 +384,7 @@
                   <img src="images/new_book_10.jpg">
                   <p class="new_book_text">장미의 이름은 장미<br><span>은희경<br>15,000원</span></p>
                 </div>
-              </section>
+              </div>
 
     <div id="content_2">
         <section id="section_2" class="section_2_2">
@@ -550,7 +501,7 @@
         </section>
     </div>
 
-        <section id="section_4"><!--section_4--><!--news-->
+        <div id="section_4"><!--section_4--><!--news-->
             <h2>NEWS</h2>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -579,7 +530,7 @@
                <div class="swiper-button-prev"></div>
                 <!--<div class="swiper-pagination"></div>넘기는 아래 불릿-->
              </div>
-        </section>
+        </div>
 
 
     <div id="content_3"> 
@@ -664,9 +615,9 @@ clickable: true,
 </script>
 
 
-<!--slick js-->
+<!--slick js
 
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>-->
 
   <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">

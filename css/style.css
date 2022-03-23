@@ -9,10 +9,6 @@ vertical-align:baseline;
 background:transparent;
 }
 
-html{
-    overflow-x: hidden;
-}
-
 *{margin:0;padding:0;}/*여백초기화*/
 a{text-decoration: none; color: #333;}/*밑줄,글자색바꾸기*/
 ul{list-style: none;}/*블릿없애기*/
@@ -29,7 +25,7 @@ body{
 /*header*/
 #header_wrap{
     width: 100%;
-    height: 75px;
+    /*overflow: hidden;*/
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -39,6 +35,7 @@ body{
 }
 #header{
     width: 100%;
+    height: 75px;
     margin: 0 auto;
 }
 .logo{
@@ -55,7 +52,6 @@ body{
 
 .menu_btn{/*모바일 메뉴 버튼 숨기기*/
     display: none;
-    float: left;
 }
 
 
@@ -80,19 +76,19 @@ body{
 }
 
 
-.search{
+.search_pc{
     float: right;
     padding: 0 10px;
     margin-top: 19px;
     overflow: hidden;
 }
-.search_input{
+.search_pc_input{
     width: 260px;
     height: 35px;
     background-color: #f3f3f3;
     border-radius: 5px;
 }
-.search_input input{
+.search_pc_input input{
     width: 230px;
     background-color: #f3f3f3;
 	border: none;
@@ -101,7 +97,7 @@ body{
     padding: 0 10px;
     margin-top: 9px;
 }
-.search img{
+.search_pc img{
     vertical-align:middle;
     display: inline-block;
     width: 14px;
@@ -132,7 +128,7 @@ body{
     height: 600px;
     margin: 0 auto;
     background-color: #111;
-    margin-top: 75px;
+    /*margin-top: 75px;*/
     position: relative;
 }
 .media_1{
@@ -143,7 +139,7 @@ body{
 }
 .media_1 video{display: block; width: 100%;}
 .media_2{
-    height: 600px;
+    width: 90px;
     position: absolute; 
     top: 0; 
     right: 25px;
@@ -281,7 +277,7 @@ object-fit: cover;
     height: 110px;
     border-radius: 5px;
     position: absolute;
-    bottom: 59px;
+    top: 49.5px;
     z-index: -1;
 }
 .bg_1{background-color: #C49DA7;}
@@ -606,6 +602,13 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 
 
 
+/*모바일 메뉴 꾸미기*/
+.m_menu{
+    display: none;
+}
+
+
+
 
 
 /************적응형 작성 부분************/
@@ -615,6 +618,9 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 @media (min-width: 1132px){
     .footer_icon_wrap{/*footer*/
         float: right;
+    }
+    .m_menu{
+        display: none;
     }
 }
 
@@ -627,14 +633,14 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     nav{/*gnd*/
         display: none;
     }
-    .search{
+    .search_pc{
         display: none;
     }
 
 
     /*main_visual*/
     .main_visual_wrap{
-        margin-top: 70px;
+        /*margin-top: 70px;*/
     }
     .media_1{
         width: 100%;
@@ -736,14 +742,14 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     nav{/*gnd*/
         display: none;
     }
-    .search{
+    .search_pc{
         display: none;
     }
 
 
     /*main_visual*/
     .main_visual_wrap{
-        margin-top: 70px;
+        /*margin-top: 70px;*/
     }
     .media_1{
         width: 100%;
@@ -848,7 +854,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     .logo{
         width: 145px;
         margin-top: 16px;
-        margin-left: 0px;
+        margin-left: 10px;
     }
     .icon_wrap{
         margin-left: 0;
@@ -856,24 +862,31 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
         margin-right: 9px;
     }
     .icon_wrap li{
-        width: 21px;
-        height: 21px;
+        width: 22px;
+        height: 22px;
         margin: 0 6px;
     }
 
 
+    #pc_menu{/*gnd*/
+        display: none;
+    }
+    .search_pc{
+        display: none;
+    }
+    
 
-    .menu_btn{/*모바일 메뉴 버튼 나타나기*/
+
+    .m_menu{
         display: block;
+        float: left;
+        margin-top: 15px;
+        margin-left: 16px;
     }
-    .sidebar_menu{
+    .m_menu a img{
         display: block;
-    }
-    #pc_menu{
-        display: none;
-    }
-    .search{
-        display: none;
+        width: 22px;
+        height: 22px;
     }
 
 
@@ -901,7 +914,7 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
 
     /*main_visual*/
     .main_visual_wrap{
-        margin-top: 50px;
+        /*margin-top: 50px;*/
     }
     .media_1{
         width: 100%;
@@ -1063,11 +1076,4 @@ h4{font-size: 12px; font-weight: 600; color: #777;}
     h3 span{padding-left: 6px;}
     h3 span img{height: 16px; padding-top: 1px;}
 
-
-    /*js 한 줄 맞추기*/
-    .daily_book_text{
-    }
 }
-
-
-
